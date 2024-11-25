@@ -18,10 +18,11 @@ int main(){
 
     printf("Qual é o nome da cidade?\n");
     scanf("%s", &nome_cidade);
-
+    //**** Mudaria para: Qual o tamanho da popução de %s?\n
     printf("Qual é o número da população de %s?\n", nome_cidade);
     scanf("%d", &populacao);
-
+    
+    //******** remova o .2 da entrada, use somente esse modificador no printf, aqui basta o %f
     printf("Qual é a área em km² de %s?\n", nome_cidade);
     scanf("%.2f", &area);
 
