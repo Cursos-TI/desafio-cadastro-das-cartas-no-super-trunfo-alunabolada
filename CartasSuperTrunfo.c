@@ -1,21 +1,42 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
+// Cadastro das Cartas
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+int main(){
+    //Variáveis para os atributos da cidade!
+    char estado[20], codigo_da_carta[20], nome_cidade[20];
+    int populacao, pontos_turisticos;
+    float area, pib;
+
+    //Cadastro das informações!
+    printf("Qual é o estado em que a ciadade se encontra?\n");
+    scanf("%s", &estado);
+
+    printf("Qual é o código da carta da cidade?\n");
+    scanf("%s", &codigo_da_carta);
+
+    printf("Qual é o nome da cidade?\n");
+    scanf("%s", &nome_cidade);
+
+    printf("Qual é o número da população de %s?\n", nome_cidade);
+    scanf("%d", &populacao);
+
+    printf("Qual é a área em km² de %s?\n", nome_cidade);
+    scanf("%.2f", &area);
+
+    printf("Qual é o PIB de %s?\n", nome_cidade);
+    scanf("%f", &pib);
+
+    printf("Quantos pontos turísticos tem em %s?\n", nome_cidade);
+    scanf("%d", &pontos_turisticos);
+
+    //Exibição dos dados registrados!
+    printf("Informações sobre %s:\n", nome_cidade);
+    printf("Estado: %s\nCódigo da Cidade: %s\n", estado, codigo_da_carta);
+    printf("Nome da Cidade: %s\nNúmero da população: %d\n", nome_cidade, populacao);
+    printf("Área em km²: %f\nPIB: R$%.2f\nNúmero de pontos turísticos: %d", area, pib, pontos_turisticos);
 
     return 0;
-}
+
+    }
